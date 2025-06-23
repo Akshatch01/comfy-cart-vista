@@ -118,7 +118,7 @@ export const ProductCard = ({ product, onClick }: ProductCardProps) => {
         {/* Price */}
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold text-gray-900">
-            ${product.price.toFixed(2)}
+            ₹{Math.round(product.price).toLocaleString('en-IN')}
           </span>
           <Button
             onClick={handleAddToCart}

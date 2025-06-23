@@ -26,7 +26,7 @@ const ProductDetail = () => {
           setProduct({
             id: data.id,
             title: data.title,
-            price: data.price,
+            price: data.price * 80, // Convert to rupees
             description: data.description,
             category: data.category,
             image: data.image,
@@ -153,7 +153,7 @@ const ProductDetail = () => {
             {/* Price */}
             <div className="mb-6">
               <span className="text-4xl font-bold text-gray-900">
-                ${product.price.toFixed(2)}
+                ₹{Math.round(product.price).toLocaleString('en-IN')}
               </span>
             </div>
 

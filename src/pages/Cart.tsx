@@ -105,7 +105,7 @@ const Cart = () => {
                             {item.product.category}
                           </p>
                           <p className="text-lg font-bold text-gray-900 mt-2">
-                            ${item.product.price.toFixed(2)}
+                            ₹{Math.round(item.product.price).toLocaleString('en-IN')}
                           </p>
                         </div>
 
@@ -159,7 +159,7 @@ const Cart = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Subtotal</span>
-                  <span className="font-semibold">${getTotalPrice().toFixed(2)}</span>
+                  <span className="font-semibold">₹{Math.round(getTotalPrice()).toLocaleString('en-IN')}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Shipping</span>
@@ -167,13 +167,13 @@ const Cart = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Tax</span>
-                  <span className="font-semibold">${(getTotalPrice() * 0.08).toFixed(2)}</span>
+                  <span className="font-semibold">₹{Math.round(getTotalPrice() * 0.08).toLocaleString('en-IN')}</span>
                 </div>
                 <div className="border-t pt-3">
                   <div className="flex justify-between">
                     <span className="text-lg font-bold">Total</span>
                     <span className="text-lg font-bold">
-                      ${(getTotalPrice() * 1.08).toFixed(2)}
+                      ₹{Math.round(getTotalPrice() * 1.08).toLocaleString('en-IN')}
                     </span>
                   </div>
                 </div>
